@@ -1,7 +1,7 @@
 # 12y9mn2b23bm0977yncy7nyr7ycr1
 
 
-Sqrt = lambda x: x**0.5 
+Sqrt = lambda __x: __x**0.5 
 
 def sqrt(x):
     return (x ** 0.5)
