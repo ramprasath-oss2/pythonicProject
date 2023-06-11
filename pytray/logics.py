@@ -21,14 +21,14 @@ def is_prime(num: int) -> bool:  # type: ignore
     """
     count = sum( num % i == 0 for i in range( 1, num + 1 ) )
     """
-    __count_var=0
+    __count=0
     for i in range(1, num+1):
         if num%i==0:
-            __count_var+=1
+            __count+=1
     
-    if __count_var>2:
+    if __count>2:
         return False
-    if __count_var == 2:
+    if __count == 2:
         return True
 
 
