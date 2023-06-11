@@ -4,8 +4,8 @@
 """
   /* Copyright ©
   /* 
-
-  
+  /*
+  /*
 """
 
 from __init__ import * 
@@ -14,24 +14,52 @@ from time import sleep
 from ast import FunctionDef
 
 
-def digit_sum(n: int):
+def digit_sum(x: int):
     """
-    digit_sum(n, /) -> int
+    digit_sum(x, /) -> int\n
     reutrns the sum value of the given digit
     """
-    i, j = 0, 0
-    sn = str(n) # type: ignore
-    while i < len(sn):
-        j += int(sn[i])
-        i += 1
-    return j
+    
+    _sn = str(x) # type: ignore
+    _i, _j = 0, 0
+
+    while _i < len(_sn):
+        _j += int(_sn[_i])
+        _i += 1
+    return _j
 
 
-def add_tuple(Tuple: tuple):
+def add_digit( inp: int ) -> int:
+    ##   date-created -> {30.05.2023}
+    inpl = list(str(inp))
+    return sum(int(j) for j in inpl)
+
+
+def simplify_to_one_digit_sum( x: int ) -> int:
+    
+    ##  This method is used to produce the wrong output
+    ##  it produces unexpected and unmatchable output
+
+    _str_x = str(x)
+
+    for _ in range(len(_str_x)):
+        if len(_str_x)>1:
+            digit_sum(x)
+    __i, __j = 0, 0
+    _str_x = str(x)
+    while __i < len(_str_x):
+        __j += int(_str_x)
+        __i += 1
+    return __j
+
+
+def add_tuple( Tuple: tuple ):
+    
     """
     add_tuple(Tuple, ...) -> tuple
     reutrns the sum of the integer elements present in the given tuple 
     """
+    
     s, i = 0, 0
     while i < len(Tuple):
         s += Tuple[i]
@@ -39,23 +67,31 @@ def add_tuple(Tuple: tuple):
     return s 
 
 
-def Factorial(n: int):
-    return 1 if n in {0, 1} else n * Factorial(n - 1)
+def Factorial( __n: int ) -> int:
+    __num: int = __n
+    return 1 if __num in {0, 1} else __num * Factorial(__num - 1)
 
 
-def radian(x=1):
+def fFactorial( __x_input: int )-> int:
+    __f_variable = 1
+    for __hidden in range(1, __x_input+1):
+        __f_variable *= __hidden 
+    return __f_variable
+
+
+def radian( x: int = 1 ) -> float:
     return (180 / math.pi) * x
 
 
-def degree(x=1):
+def degree( x: int = 1 ) -> float:
     return (math.pi / 180) * x
 
 
-def work_done(force=1, direction=1):
+def work_done( force=1, direction=1 ) -> float:
     return force * direction
 
 
-def mid_value_list(x=[]):
+def mid_value_list( x: list = [] ):
     # sourcery skip: default-mutable-arg, extract-duplicate-method, inline-variable, remove-redundant-if, simplify-division
     l = len(x)
     if (l%2) == 0:
@@ -104,13 +140,14 @@ def Freons(fluorine: int = 1, carbon: int = 1, hydrogen: int = 0):
     return f"Freon-{ c-1 }{ h+1 }{ f }"
 
 
-def str_with_space(string: str):
+def str_with_space(string: str) -> str:
+    ##   bug-code
     i=0
     return f"{string[0]} {string[i + 1:]}"
 
 
 def add_all_values(*num: float or int) -> float:
-    # This function is created in the date {07.07.2021}
+    #   date-created {07.07.2021}
     s, i = 0, 0
     while i < len(num):
         s += num[i]
@@ -119,7 +156,7 @@ def add_all_values(*num: float or int) -> float:
 
 
 def Product_all_values_Fn(*num: float):
-    # This function is created in the date {07.07.2021}
+    ##  date-created {07.07.2021} 
     s, i = 1, 0
     while i < len(num):
         s *= num[i]
@@ -127,7 +164,7 @@ def Product_all_values_Fn(*num: float):
     return s
 
 
-add_all_numbers = lambda *num: sum(num) # date -> {28.10.2021}
+add_all_numbers = lambda *num: sum(num)   ##  date-created -> {28.10.2021}
 
 
 def product(*num: float):
@@ -139,7 +176,7 @@ def product(*num: float):
 
 Square = lambda x, y: x*y 
 
-multiply = lambda *args: product(*args) #  date -> {03/04/2023}
+multiply = lambda *args: product(*args)   #  date-created -> {03/04/2023}
 
 multiply_all_numbers = lambda *val: product(*val)
 
@@ -182,3 +219,16 @@ def cPrintf(text: str = ..., iter_range: int = 1, delay: int = 0) -> None:
         sleep(delay)
         print(text)
     return
+
+
+def power(number: int) -> int:
+    # sourcery skip: inline-immediately-returned-variable, sum-comprehension
+    """
+    return sum(number for _ in range(number))
+    """
+
+    s = 0
+    for _ in range(number):
+        s += number
+    return s
+

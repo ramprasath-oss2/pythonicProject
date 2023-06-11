@@ -1,57 +1,60 @@
 # 12y9mn2b23bm0977yncy7nyr7ycr1
 
 
-Sqrt = lambda x: x**0.5 
+Sqrt = lambda __x: __x**0.5 
 
 def sqrt(x):
     return (x ** 0.5)
 
-def largest_number(*_nums) -> int:
-    return max([*_nums])  # type: ignore
+def largest_number(*nums) -> int:
+    __num_large: tuple = nums
+    return max([*__num_large])  # type: ignore
 
 
 def smallest_number(*nums) -> int:
-    return min([*nums])
+    __num_small: tuple = nums
+    return min([*__num_small])
 
 
-def prime_number(num: int) -> bool:  # type: ignore
+def is_prime(num: int) -> bool:  # type: ignore
     # sourcery skip: remove-unnecessary-cast, simplify-constant-sum, sum-comprehension
     """
-    count = sum(num%i == 0 for i in range(1, num+1))
+    count = sum( num % i == 0 for i in range( 1, num + 1 ) )
     """
-    count=0
+    __count_var=0
     for i in range(1, num+1):
         if num%i==0:
-            count+=1
+            __count_var+=1
     
-    if count>2:
+    if __count_var>2:
         return False
-    if count == 2:
+    if __count_var == 2:
         return True
 
 
 def sum_of_n_numbers(x: int) -> int:
-    return sum(range(x+1))
+    __result_sumofn: int = x
+    return sum(range(__result_sumofn + 1))
         
     
-def sum_of_squares(number) -> int:
+def sum_of_squares(number: int) -> int:
     return ((number * (number + 1) * (2*number + 1)) / 6)  # type: ignore
 
         
 def sum_of_cubes(num) -> int:
-    res = (num * (num+1)) * 0.5
+    res = (num * (num + 1)) * 0.5
     return res * res  # type: ignore
 
 
 
 def newtonSqrt(n: float) -> int:  # type: ignore
 
-    approx = 0.5 * n
-    better = 0.5 * (approx + n/approx)
+    __approx = 0.5 * n
+    __better = 0.5 * (__approx + n/__approx)
     
-    while (better != approx):
-        approx = better
-        better = 0.5 * (approx + n/approx)
+    while (__better != __approx):
+        __approx = __better
+        __better = 0.5 * (__approx + n/__approx)
         
-    return int(approx)
+    return int(__approx)
 
