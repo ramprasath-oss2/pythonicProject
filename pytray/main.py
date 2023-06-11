@@ -174,7 +174,7 @@ def product(*num: float):
     return s
 
 
-Square = lambda x, y: x*y 
+sqr = lambda x, y: x*y 
 
 multiply = lambda *args: product(*args)   #  date-created -> {03/04/2023}
 
