@@ -47,14 +47,14 @@ def sum_of_cubes(num) -> int:
 
 
 
-def newtonSqrt(n: float) -> int:  # type: ignore
+def newtonSqrt(num: float) -> int:  # type: ignore
 
-    __approx = 0.5 * n
-    __better = 0.5 * (__approx + n/__approx)
+    __approx = 0.5 * num
+    __better = 0.5 * (__approx + num/__approx)
     
     while (__better != __approx):
         __approx = __better
-        __better = 0.5 * (__approx + n/__approx)
+        __better = 0.5 * (__approx + num/__approx)
         
     return int(__approx)
 
