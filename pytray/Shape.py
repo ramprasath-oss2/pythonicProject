@@ -35,7 +35,7 @@ class Circle:
         return self._pi * (self.radius ** 2)
     
     def Diameter(self):
-        return self.radius * 2
+        return self.diameter
     
     def getChord(self, perdistance: int):
         return 2 * sqrt( (self.radius**2) - (perdistance**2) )

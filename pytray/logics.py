@@ -1,4 +1,4 @@
-# 12y9mn2b23bm0977yncy7nyr7ycr1
+##   Smart Logics and Shortcuts
 
 
 Sqrt = lambda __x: __x**0.5 
