@@ -57,7 +57,7 @@ def add_tuple( Tuple: tuple ):
     
     """
     add_tuple(Tuple, ...) -> tuple
-    reutrns the sum of the integer elements present in the given tuple 
+    returns the sum of the integer elements present in the given tuple 
     """
     
     s, i = 0, 0
@@ -117,7 +117,7 @@ def mid_value_tuple(x: tuple):
         return x[j]
 
 
-def n_comma_n(num=2, choice="even" or "odd"):
+def n_comma_n(num=2, choice: str = ...):
     
     if choice in {"Odd", "ODD", "odd", "O", "o"}:    
         for i in range(1, 2*(num + 1), 2):
@@ -138,12 +138,6 @@ def Freons(fluorine: int = 1, carbon: int = 1, hydrogen: int = 0):
     """
     h, f, c = hydrogen, fluorine, carbon
     return f"Freon-{ c-1 }{ h+1 }{ f }"
-
-
-def str_with_space(string: str) -> str:
-    ##   bug-code
-    i=0
-    return f"{string[0]} {string[i + 1:]}"
 
 
 def add_all_values(*num: float or int) -> float:
@@ -218,15 +212,13 @@ def cPrintf(text: str = ..., iter_range: int = 1, delay: int = 0) -> None:
     for _ in range(iter_range):
         sleep(delay)
         print(text)
-    return
+    
 
 
 def power(number: int) -> int:
     # sourcery skip: inline-immediately-returned-variable, sum-comprehension
-    """
-    return sum(number for _ in range(number))
-    """
-
+    ##  return sum(number for _ in range(number))
+    
     s = 0
     for _ in range(number):
         s += number
