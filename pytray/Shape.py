@@ -26,18 +26,18 @@ class Circle:
 
     def __init__(self, radius) -> None:
         self.radius = radius
-        self.diameter = self.radius * 2
+        self.dia_meter = self.radius * 2
 
-    def circumference(self):
+    def circumference(self) -> int:
         return 2 * self._pi * self.radius 
     
-    def area(self):
+    def area(self) -> int:
         return self._pi * (self.radius ** 2)
     
-    def Diameter(self):
-        return self.diameter
+    def Diameter(self) -> int:
+        return self.dia_meter
     
-    def getChord(self, perdistance: int):
+    def getChord(self, perdistance: int) -> int:
         return 2 * sqrt( (self.radius**2) - (perdistance**2) )
 
 
