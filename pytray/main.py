@@ -17,7 +17,7 @@ from ast import FunctionDef
 def digit_sum(x: int):
     """
     digit_sum(x, /) -> int\n
-    reutrns the sum value of the given digit
+    returns the sum value of the given digit
     """
     
     _sn = str(x) # type: ignore
