@@ -1,6 +1,6 @@
 #  Using the Object-Oriented Programming Concepts
 #  Creating Shapes to this file 
-#  Implementing those shapes where it is necessery
+#  Implementing those shapes where it is necessary
 
 from __init__ import *
 from main import *
