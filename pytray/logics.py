@@ -18,13 +18,8 @@ def smallest_number(*nums) -> int:
 
 def is_prime(num: int) -> bool:  # type: ignore
     # sourcery skip: remove-unnecessary-cast, simplify-constant-sum, sum-comprehension
-    """
-    count = sum( num % i == 0 for i in range( 1, num + 1 ) )
-    """
-    __count=0
-    for i in range(1, num+1):
-        if num%i==0:
-            __count+=1
+    
+    __count = sum( num % i == 0 for i in range( 1, num + 1 ) )
     
     if __count>2:
         return False
