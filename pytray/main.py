@@ -31,8 +31,8 @@ def digit_sum(x: int):
 
 def add_digit( inp: int ) -> int:
     ##   date-created -> {30.05.2023}
-    inpl = list(str(inp))
-    return sum(int(j) for j in inpl)
+    List = list(str(inp))
+    return sum(int(j) for j in List)
 
 
 def simplify_to_one_digit_sum( x: int ) -> int:
@@ -223,4 +223,19 @@ def power(number: int) -> int:
     for _ in range(number):
         s += number
     return s
+
+
+##  Checking the different case sensitivities 
+
+def case_sensitivity_check(word: str) -> list:
+
+    capital_word = word.capitalize()
+    lower_case = word.lower()
+    upper_case = word.upper()
+    swap_case = word.swapcase()
+
+    return [ capital_word, lower_case, upper_case, swap_case ]
+
+
+check_case_sensitivity = lambda word: [ word.capitalize(), word.lower(), word.upper(), word.swapcase() ]
 

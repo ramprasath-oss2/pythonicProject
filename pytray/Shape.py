@@ -24,7 +24,7 @@ class Circle:
 
     _pi = PI
 
-    def __init__(self, radius) -> None:
+    def __init__(self, radius : int | float | None = 1) -> None:
         self.radius = radius
         self.dia_meter = self.radius * 2
 
@@ -37,7 +37,7 @@ class Circle:
     def Diameter(self) -> int:
         return self.dia_meter
     
-    def getChord(self, perdistance: int) -> int:
-        return 2 * sqrt( (self.radius**2) - (perdistance**2) )
+    def getChord(self, periDistance: int) -> int:
+        return 2 * sqrt( (self.radius**2) - (periDistance**2) )
 
 
