@@ -3,6 +3,7 @@
 
 Sqrt = lambda __x: __x**0.5 
 
+
 def sqrt(x):
     return (x ** 0.5)
 
